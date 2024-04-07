@@ -51,7 +51,7 @@ module udp_rx #(
     localparam      ARP_TPYE    =   16'h0806                    ;//以太网帧类型 ARP。
     localparam      ICMP_TYPE   =   8'd01                       ;//ICMP协议类型。
     localparam      UDP_TYPE    =   8'd17                       ;//UDP协议类型。
-    
+     
     reg                             start                       ;//检测到前导码和SFD信号后的开始接收数据信号。
     reg                             error_flag                  ;//检测到接收数据包不是发给该开发板或者接收到的不是ARP、ICMP、UDP数据包时拉高。
     reg             [7 : 0]	        state_n                     ;//状态机次态。
